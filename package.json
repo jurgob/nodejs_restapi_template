@@ -4,18 +4,39 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 68,
+        "branches": 50,
+        "lines": 66,
+        "functions": 75
+      }
+    }
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "express-openapi-validator": "^3.16.1",
     "pino": "^6.3.1"
   },
   "devDependencies": {
+    "axiosist": "^0.9.0",
+    "jest": "^26.0.1",
     "nodemon": "^2.0.4"
   }
 }
