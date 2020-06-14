@@ -19,13 +19,12 @@ const initTest = async () => {
 			assertResponse.status = status
 		}
 		
-		
 		const response = await axios(current_request)
 		const subresponse = {
 			data: response.data,
 			status: response.status
 		}
-		
+
 		expect(subresponse).toEqual(expect.objectContaining(assertResponse))
 	}
 }
