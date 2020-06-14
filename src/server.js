@@ -1,10 +1,7 @@
-const {createApp} = require('./rest')
-const logger = require('pino')()
-const http = require('http');
+const http = require("http");
+const { createApp } = require("./rest");
+// const logger = require("pino")();
 
-
-createApp()
-	.then(app => {
-		http.createServer(app).listen(3000);
-	})
-
+createApp().then((app) => {
+  http.createServer(app).listen(3000);
+});
