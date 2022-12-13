@@ -34,7 +34,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-openapi-validator": "^3.16.1",
     "pino": "^6.3.1"
   },
